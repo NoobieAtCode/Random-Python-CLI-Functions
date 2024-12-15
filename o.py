@@ -29,7 +29,7 @@ def loadbar(barlength:int=20, pause1:int=0.1, pauselong:int=0.1,finalwait:int=5,
       print(f"{loading} {defaultunloadedbar}", flush=True, end="\r")
 
 
-def tywr(i:str = "Placeholder",s:int = 20,enable_sys=False):
+def tywr(i:str = "Placeholder",s:int = 20,enable_sys: bool=False):
   if enable_sys:
     sys_print = sys.stdout.write
     for x in i:
@@ -46,6 +46,8 @@ def tywr(i:str = "Placeholder",s:int = 20,enable_sys=False):
       print(x,flush=True,end="")
     
   return ""
+
+tywr(enable_sys=True)
 
 def qformula(a, b, c, r):
   p = None
